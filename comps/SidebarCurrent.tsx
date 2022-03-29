@@ -4,6 +4,8 @@ import DetailsTable from './DetailsTable';
 import sample from '../data/sample';
 import Context from '../utils/Context';
 
+const msToKmh = (ms: number) => Math.round((ms * 3600) / 1000) / 100;
+
 const degToDirection = (degrees: number) => {
   const segment = 360 / 16;
   switch (true) {
@@ -74,7 +76,9 @@ const SidebarCurrent = (props: Props) => {
         <tbody>
           <tr>
             <th>Wind speed</th>
-            <td>{current.wind_speed}</td>
+            <td>
+              {msToKmh(current.wind_speed)}km/h ({current.wind_speed}m/s)
+            </td>
           </tr>
           <tr>
             <th>Wind direction</th>
@@ -85,7 +89,9 @@ const SidebarCurrent = (props: Props) => {
           {current?.wind_gust && (
             <tr>
               <th>Wind gust</th>
-              <td>{current.wind_gust}</td>
+              <td>
+                {msToKmh(current.wind_gust)}km/s ({current.wind_gust}m/s)
+              </td>
             </tr>
           )}
         </tbody>

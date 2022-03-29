@@ -11,9 +11,11 @@ const WeekContainer = styled.div<{ state: string }>`
   transition: 0.5s;
 `;
 
-type Props = {};
+type Props = {
+  state: string;
+};
 
-const Week = ({ state }: { state: string }) => {
+const Week = ({ state }: Props) => {
   const { weather } = useContext(Context);
   return (
     <WeekContainer state={state}>

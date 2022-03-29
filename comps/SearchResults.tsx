@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import City from '../types/city';
-import Context from '../utils/Context';
 
 const ResultsContainer = styled.ul`
   margin: 0;

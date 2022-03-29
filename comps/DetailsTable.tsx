@@ -22,8 +22,6 @@ const Table = styled.table`
   }
 `;
 
-type Props = {};
-
 const DetailsTable = (props: React.ComponentPropsWithoutRef<'table'>) => {
   return <Table>{props.children}</Table>;
 };

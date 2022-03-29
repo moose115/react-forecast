@@ -6,8 +6,6 @@ import City from '../types/city';
 import Loading from './Loading';
 import SearchResults from './SearchResults';
 
-type Props = {};
-
 const SearchContainer = styled.div<{ open: boolean }>`
   display: flex;
   flex-direction: column;
@@ -59,7 +57,7 @@ const ResultsBox = styled.div<{ areResults: boolean }>`
   overflow-y: scroll;
 `;
 
-const SidebarSearch = (props: Props) => {
+const SidebarSearch = () => {
   const input = useRef<HTMLInputElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');

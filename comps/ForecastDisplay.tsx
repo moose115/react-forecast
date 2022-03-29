@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Transition } from 'react-transition-group';
 import styled from 'styled-components';
-import sample from '../data/sample';
 import Today from './Today';
-import WeatherCards from './WeatherCards';
 import Week from './Week';
 
 const DisplayContainer = styled.main`
@@ -21,10 +19,7 @@ const DisplayContainer = styled.main`
 
 const ButtonsContainer = styled.div``;
 
-type ButtonProps = {
-  active: boolean;
-};
-const PeriodButton = styled.button<ButtonProps>`
+const PeriodButton = styled.button<{ active: boolean }>`
   margin-right: 1em;
   padding: 0.25em 0.75em;
   background-color: ${({ active }) => (active ? '#46518f' : 'transparent')};
@@ -41,9 +36,7 @@ const PeriodButton = styled.button<ButtonProps>`
   }
 `;
 
-type Props = {};
-
-const ForecastDisplay = (props: Props) => {
+const ForecastDisplay = () => {
   const [view, setView] = useState('today');
 
   return (

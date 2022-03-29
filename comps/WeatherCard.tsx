@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
-import Forecast, { Daily } from '../types/forecast';
+import { Daily } from '../types/forecast';
 
 const CardContainer = styled.div`
   display: flex;
@@ -38,7 +38,7 @@ const WeatherCard = ({ daily }: Props) => {
         width="80px"
         height="80px"
       />
-      <CardDegrees>{Math.round(daily.temp.max)}&deg;</CardDegrees>
+      <CardDegrees>{Math.round(daily.temp.max)}&deg;C</CardDegrees>
       <CardDescription>{daily.weather[0].main}</CardDescription>
     </CardContainer>
   );

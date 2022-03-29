@@ -24,9 +24,7 @@ const LoadingAnim = styled(LoaderAlt)`
   animation: ${rotate} 1s ease-in-out infinite;
 `;
 
-type Props = {};
-
-const Loading = (props: Props) => {
+const Loading = () => {
   return (
     <LoadingContainer>
       <LoadingAnim color="#454545" size="3em" />

@@ -9,7 +9,6 @@ import styled from 'styled-components';
 import ForecastDisplay from '../comps/ForecastDisplay';
 import Sidebar from '../comps/Sidebar';
 import backgrounds from '../data/backgrounds';
-import sample from '../data/sample';
 import Forecast from '../types/forecast';
 import Context from '../utils/Context';
 

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import sample from '../data/sample';
 import Context from '../utils/Context';
 
 const Degrees = styled.span`

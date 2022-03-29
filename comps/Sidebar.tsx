@@ -15,9 +15,7 @@ const NavContainer = styled.nav`
   font-size: 1.5rem;
 `;
 
-type Props = {};
-
-const Nav = (props: Props) => {
+const Nav = () => {
   return (
     <NavContainer>
       <SidebarSearch />
